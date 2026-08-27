@@ -1,9 +1,9 @@
 {
-  "schema_version": "v1",
-  "name_for_human": "Acquaman Plugin",
-  "name_for_model": "acquaman_plugin",
-  "description_for_human": "Example OpenAI Codex-ready plugin scaffold for Acquaman.",
-  "description_for_model": "Use this plugin to inspect Acquaman plugin status and fetch mock plugin capabilities.",
+
+"name": "acquaman-dc-plugin",
+  "version": "1.0.0",
+  "description": "Example OpenAI Codex-ready plugin scaffold for Acquaman.",
+  "skills": "./skills/"
   "auth": {
     "type": "none"
   },
