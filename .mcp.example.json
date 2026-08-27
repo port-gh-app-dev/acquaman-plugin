@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "acquaman-plugin-http": {
+      "url": "http://localhost:3333/mcp",
+      "headers": {
+        "Authorization": "******"
+      }
+    },
+    "acquaman-plugin-stdio": {
+      "command": "node",
+      "args": [
+        "./mock/mcp-server.js"
+      ]
+    }
+  }
+}
