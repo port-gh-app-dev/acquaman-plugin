@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "acquaman-plugin-mock": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-everything"
+      ],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  }
+}
