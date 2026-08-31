@@ -9,6 +9,13 @@
       "env": {
         "NODE_ENV": "development"
       }
+    },
+    "mysql": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-mysql"
+      ]
     }
   }
 }
