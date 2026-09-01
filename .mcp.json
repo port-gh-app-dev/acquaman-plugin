@@ -9,6 +9,21 @@
       "env": {
         "NODE_ENV": "development"
       }
+    },
+    "remote-weather-service": {
+      "type": "http",
+      "url": "https://mcp.accuweather.com",
+      "env": {
+        "NOTE": "Basic HTTP servers require a direct URL pointing to the MCP endpoint"
+      }
+    },
+    "secure-internal-db": {
+      "type": "http",
+      "url": "http://10.0.1",
+      "headers": {
+        "Authorization": "Bearer mcp_sec_token_993412aefb",
+        "X-Custom-Client-ID": "cursor-agent-01"
+      }
     }
   }
 }
