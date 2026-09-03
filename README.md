@@ -1,6 +1,6 @@
 # Acquaman Plugin (OpenAI Codex Scaffold)
 
-This repository is scaffolded to support an OpenAI plugin-style integration and local Codex MCP configuration.
+This repository is scaffolded to support an OpenAI plugin-style integration and local Codex MCP configurations
 
 ## Included Files
 
