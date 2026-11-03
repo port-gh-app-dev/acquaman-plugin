@@ -1,0 +1,168 @@
+project:
+  name: "Acquaman Plugin"
+  description: "A minimal, mock-oriented scaffold for an OpenAI Codex plugin: plugin manifests, a mock OpenAPI contract, MCP server configuration, and a placeholder stdio MCP server."
+  repo_base_url: "https://github.com/port-gh-app-dev/acquaman-plugin/blob"
+  ref_commit_hash: "7b88b3f075d9942173848e604a87dcbfbc62ba57"
+  updated_at: "2026-11-03"
+
+pages:
+  - id: acquaman-plugin_01_overview
+    title: "Overview"
+    filename: "01_overview.md"
+    description: "Purpose, repository layout, and quick start of the scaffold"
+    source_files:
+      - "README.md"
+      - ".well-known/ai-plugin.json"
+    sections:
+      - id: acquaman-plugin_01_overview_introduction
+        title: "Introduction"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_01_overview_repository-layout
+        title: "Repository Layout"
+        description: "Table of every file and its role, with a diagram of how they relate"
+        autogen: true
+        source_files:
+          - ".codex-plugin/plugin.json"
+          - ".mcp.json"
+          - ".mcp.example.json"
+          - "openapi.yaml"
+          - "mock/mcp-server.js"
+          - ".github/workflows/*.yml"
+        diagrams_needed: true
+        diagram_types: ["flowchart"]
+      - id: acquaman-plugin_01_overview_quick-start
+        title: "Quick Start"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+    related_pages:
+      - acquaman-plugin_02_plugin-manifests
+      - acquaman-plugin_03_api-contract
+      - acquaman-plugin_04_mcp-configuration
+      - acquaman-plugin_05_ci-and-known-issues
+
+  - id: acquaman-plugin_02_plugin-manifests
+    title: "Plugin Manifests"
+    filename: "02_plugin-manifests.md"
+    description: "The OpenAI-style and Codex plugin manifests"
+    source_files:
+      - ".well-known/ai-plugin.json"
+      - ".codex-plugin/plugin.json"
+    sections:
+      - id: acquaman-plugin_02_plugin-manifests_ai-plugin
+        title: "OpenAI Plugin Manifest"
+        description: "Fields of .well-known/ai-plugin.json"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_02_plugin-manifests_codex-plugin
+        title: "Codex Plugin Manifest"
+        description: "Fields of .codex-plugin/plugin.json, including the skills reference and its JSON validity"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_02_plugin-manifests_comparison
+        title: "Manifest Comparison and Discovery Flow"
+        autogen: true
+        diagrams_needed: true
+        diagram_types: ["flowchart"]
+    related_pages:
+      - acquaman-plugin_01_overview
+      - acquaman-plugin_03_api-contract
+
+  - id: acquaman-plugin_03_api-contract
+    title: "API Contract"
+    filename: "03_api-contract.md"
+    description: "The mock OpenAPI specification"
+    source_files:
+      - "openapi.yaml"
+    sections:
+      - id: acquaman-plugin_03_api-contract_overview
+        title: "Specification Overview"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_03_api-contract_endpoints
+        title: "Endpoints"
+        autogen: true
+        diagrams_needed: true
+        diagram_types: ["sequence"]
+        sections:
+          - id: acquaman-plugin_03_api-contract_endpoints_health
+            title: "GET /health"
+            autogen: true
+            diagrams_needed: false
+            diagram_types: []
+          - id: acquaman-plugin_03_api-contract_endpoints_capabilities
+            title: "GET /capabilities"
+            autogen: true
+            diagrams_needed: false
+            diagram_types: []
+    related_pages:
+      - acquaman-plugin_02_plugin-manifests
+
+  - id: acquaman-plugin_04_mcp-configuration
+    title: "MCP Configuration and Mock Server"
+    filename: "04_mcp-configuration.md"
+    description: "MCP server definitions and the placeholder stdio server"
+    source_files:
+      - ".mcp.json"
+      - ".mcp.example.json"
+      - "mock/mcp-server.js"
+    sections:
+      - id: acquaman-plugin_04_mcp-configuration_active-config
+        title: "Active Configuration (.mcp.json)"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_04_mcp-configuration_example-config
+        title: "Example Configuration (.mcp.example.json)"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+      - id: acquaman-plugin_04_mcp-configuration_mock-server
+        title: "Placeholder Mock Server"
+        autogen: true
+        diagrams_needed: true
+        diagram_types: ["flowchart"]
+      - id: acquaman-plugin_04_mcp-configuration_security
+        title: "Security Considerations"
+        description: "Credential-like values committed in configuration; do not reproduce secret values"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+    related_pages:
+      - acquaman-plugin_01_overview
+      - acquaman-plugin_05_ci-and-known-issues
+
+  - id: acquaman-plugin_05_ci-and-known-issues
+    title: "CI and Known Issues"
+    filename: "05_ci-and-known-issues.md"
+    description: "GitHub Actions workflows and observed problems in the scaffold"
+    source_files:
+      - ".github/workflows/ci_workflow_1_xz25.yml"
+      - ".github/workflows/ci_workflow_2_pnwt.yml"
+      - ".codex-plugin/plugin.json"
+      - ".mcp.json"
+      - ".mcp.example.json"
+      - "README.md"
+    sections:
+      - id: acquaman-plugin_05_ci-and-known-issues_workflows
+        title: "CI Workflows"
+        autogen: true
+        diagrams_needed: true
+        diagram_types: ["flowchart"]
+      - id: acquaman-plugin_05_ci-and-known-issues_known-issues
+        title: "Known Issues and Production Checklist"
+        autogen: true
+        diagrams_needed: false
+        diagram_types: []
+    related_pages:
+      - acquaman-plugin_04_mcp-configuration
+      - acquaman-plugin_02_plugin-manifests
+
+notes:
+  - "The repository is intentionally minimal; no application source beyond a placeholder script exists."
+  - "Secret-like values found in configuration are intentionally not reproduced in this wiki."
